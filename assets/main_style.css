@@ -1,0 +1,81 @@
+﻿/* style for hide profile page un wanted sections*/
+		.user-edit-php .user-rich-editing-wrap, 
+		.user-edit-php .user-syntax-highlighting-wrap,
+		.user-edit-php.user-admin-color-wrap,
+		.user-edit-php .user-admin-color-wrap,
+		.user-edit-php .user-comment-shortcuts-wrap,
+		.user-edit-php .show-admin-bar,
+		.user-edit-php .user-description-wrap,
+		.user-edit-php .user-profile-picture,
+		.user-edit-php .user-url-wrap,
+		.user-edit-php .user-display-name-wrap,
+		.user-edit-php .user-nickname-wrap,
+		.user-edit-php .user-last-name-wrap,
+		.user-edit-php .user-sessions-wrap,
+		.user-edit-php .user-role-wrap{
+		display:none;
+		}
+
+		.profile-php .user-rich-editing-wrap, 
+		.profile-php .user-syntax-highlighting-wrap,
+		.profile-php.user-admin-color-wrap,
+		.profile-php .user-admin-color-wrap,
+		.profile-php .user-comment-shortcuts-wrap,
+		.profile-php .show-admin-bar,
+		.profile-php .user-description-wrap,
+		.profile-php .user-profile-picture,
+		.profile-php .user-pass1-wrap,
+		.profile-php .user-url-wrap,
+		.profile-php .user-display-name-wrap,
+		.profile-php .user-nickname-wrap,
+		.profile-php .user-last-name-wrap,
+		.profile-php .user-action-wrap,
+		.profile-php .user-sessions-wrap{
+		display:none;
+		}
+    /* css for hide colums of user list page*/
+		.users-php .column-email, 
+		.users-php .column-posts{
+			display:none;
+		}
+
+
+		/*.user-new-php .user-pass1-wrap{
+			display: none;
+		}*/
+
+		.user-new-php #ure_select_other_roles{
+			display: none;
+		}
+		#profile-page h3{
+			display: none;
+		}
+		.active_cbox{
+			margin-left:10%!important;
+		}
+		/*css for hide bulk action row from all user list table od fellow admin*/
+		.users-php .tablenav.top {
+		display: none;
+		}
+		.users-php .tablenav.bottom {
+		display: none;
+		}
+
+		.users-php .subsubsub .all,.users-php .subsubsub .subscriber {
+		display: none;
+		}
+
+
+		.subscribe_table .tablenav.top{
+			display:none;
+		}
+
+
+		.users-php .users #the-list input[type=checkbox]{
+			display:none;
+		}
+
+		.users-php .users .check-column{
+			display:none;
+		}
+	

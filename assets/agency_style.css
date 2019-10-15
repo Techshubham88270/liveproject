@@ -1,0 +1,12 @@
+/* css apply if agency admin will loged in only*/
+.users-php .subsubsub{
+display:none;
+}
+/* css for hide add role change role menu of user list page*/
+.users-php .alignleft{
+display:none;
+}
+/* css for display bulkaction menu of user list page*/
+.users-php .bulkactions{
+display:block!important;
+}
