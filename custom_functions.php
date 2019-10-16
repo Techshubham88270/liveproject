@@ -30,8 +30,22 @@ ob_start();
 			//call this function for display suceess message if any aggency will created.
 			add_agency_message($user_id,$u_action='add',$message_type='success');
 
-			$msg = "Your agency has been created successfully. Your password is: ".$password;
-			wp_mail($user->user_email, "Agency created", $msg);
+			add_filter( 'wp_mail_content_type', 'fellow_mail_content_type' );
+			 
+			$to = $user->user_email;
+			$subject = 'New agency created';
+			$body = '<p>Your agency has been created successfully. Following are your login credentials.</p><br>
+			<b>Login :</b> http://lockedsandbox.com/fellow/wp-login.php<br>
+			<b>Username :</b> '.$username. ' <br><b>Password :</b> '.$password;
+			 
+			wp_mail( $to, $subject, $body );
+			 
+			// Reset content-type to avoid conflicts -- https://core.trac.wordpress.org/ticket/23578
+			remove_filter( 'wp_mail_content_type', 'fellow_mail_content_type' );
+			 
+			function fellow_mail_content_type() {
+			    return 'text/html';
+			}
 			echo '<br>';
 			/**
 			* wp_create_user function set default subscriber role 
@@ -1190,7 +1204,7 @@ ob_start();
 	    <script type="text/javascript">
 	        jQuery(document).ready( function($)
 	        {
-	            $('.subsubsub').before('<form action="#" method="POST"><input type="hidden" id="fellow_export_excel" name="fellow_export_excel" value="1" /><input class="button button-primary user_export_button" style="margin-top:3px;" type="submit" value="<?php esc_attr_e('Download Subscribers', 'mytheme');?>" /></form>');
+	            $('.subsubsub').before	('<form action="#" method="POST"><input type="hidden" id="fellow_export_excel" name="fellow_export_excel" value="1" /><input class="button button-primary user_export_button" style="margin-top:3px;" type="submit" value="<?php esc_attr_e('Download Subscribers', 'mytheme');?>" /></form>');
 	        });
 	    </script>
 	    <?php
